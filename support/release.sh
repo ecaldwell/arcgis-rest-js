@@ -14,7 +14,7 @@ git checkout -b gh-release
 lerna release --skip-git --skip-npm
 
 VERSION=$(node --eval "console.log(require('./lerna.json').version);")
-ZIP = esri-rest-v$(VERSION);
+TEMP_FOLDER=esri-rest-v$VERSION;
 
 # force add built files
 git add packages/*/dist -f
@@ -26,12 +26,12 @@ git commit -m "build $VERSION" --no-verify
 git push https://github.com/ArcGIS/rest-js.git gh-release
 
 # create a ZIP archive of the dist files
-mkdir "$ZIP"
-cp packages/*/dist/umd/* "$ZIP"
-zip -r "$ZIP".zip "$ZIP"
+mkdir $TEMP_FOLDER
+cp packages/*/dist/umd/* $TEMP_FOLDER
+zip -r $TEMP_FOLDER.zip $TEMP_FOLDER
 
 # run gh-release to create the tag and push release to github
-gh-release --assets "$ZIP".zip
+gh-release --assets $TEMP_FOLDER.zip
 
 # checkout master and delete release branch locally and on GitHub
 git checkout $ORIGINAL_BRANCH

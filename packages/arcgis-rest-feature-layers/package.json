@@ -1,0 +1,29 @@
+{
+  "name": "@esri/arcgis-rest-feature-layers",
+  "version": "0.0.0",
+  "description": "Create, query, update, and delete feature layers and their features.",
+  "types": "dist/types/index.d.ts",
+  "author": "",
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run build:esm",
+    "build:esm": "tsc --module es2015 --outDir ./dist/esm --sourceMap --declaration --declarationDir ./dist/types",
+    "postbuild": "rimraf dist/esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcGIS/arcgis-rest-js.git"
+  },
+  "contributors": [
+    {
+      "name": "Noah Mulfinger",
+      "email": "nmulfinger@esri.com",
+      "url": "https://noahmulfinger.com/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/ArcGIS/arcgis-rest-js/issues"
+  },
+  "homepage": "https://github.com/ArcGIS/arcgis-rest-js#readme"
+}

@@ -90,7 +90,6 @@
     "lint:fix": "tslint --project tsconfig.json --type-check --fix",
     "precommit": "lint-staged",
     "bootstrap": "lerna bootstrap",
-    "postinstall": "npm run bootstrap",
     "release:prepare": "lerna publish --skip-git --skip-npm --yes && node ./support/changelog.js",
     "release:review": "git --no-pager diff --word-diff",
     "release:publish": "./support/publish.sh",

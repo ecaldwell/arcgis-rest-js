@@ -1,6 +1,6 @@
-import { getSelf, getPortal } from "../src/index";
+import { getSelf, getPortal } from "../../src/index";
 
-import { PortalResponse } from "./mocks/responses";
+import { PortalResponse } from "./../mocks/portal";
 
 import * as fetchMock from "fetch-mock";
 

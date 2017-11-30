@@ -1,4 +1,4 @@
-import { IPortal } from "../../src/portal";
+import { IPortal } from "../../src/utils/get-portal";
 
 export const PortalResponse: IPortal = {
   access: "public",

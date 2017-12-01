@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>createItemInFolder | API Reference | ArcGIS REST JS</title>
+    
+    <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+    
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/css/calcite-web.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+  </head>
+  <body>
+  <!-- Drawer -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav" tabindex="0">
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">ArcGIS REST JS</h2>
+          <a href="/guides/" class="side-nav-link">Guides</a>
+          <a href="/api/" class="is-active side-nav-link">API Reference</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div id="page" class="wrapper">
+      <!-- Sample HTML -->
+      <header class="top-nav">
+        <div class="grid-container">
+          <div class="column-24">
+            <!-- desktop sized navigation -->
+            <div class="tablet-hide">
+              <!-- logo / home -->
+              <a href="/" class="top-nav-title">ArcGIS REST JS</a>
+              <!-- primary navigation sections -->
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+                <a href="/guides/" class="top-nav-link">Guides</a>
+                <a href="/api/" class="is-active top-nav-link">API Reference</a>
+              </nav>
+            </div>
+
+            <!-- tablet and mobile sized navigation -->
+            <div class="tablet-show top-nav-flex">
+              <!-- open primary navigation drawer -->
+              <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+                <a href="/" class="icon-ui-menu top-nav-link js-drawer-toggle" data-drawer="top-nav"><span class="phone-hide">Menu</span></a>
+              </nav>
+              <!-- logo / home -->
+              <header class="top-nav-flex-title">
+                <a href="/" class="top-nav-link">ArcGIS REST API JavaScript Client</a>
+              </header>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+
+      <main id="#skip-to-content">
+        
+  <div class="grid-container trailer-1 leader-1">
+    <div class="column-6">
+    <api-search>
+      <ul class="list-plain">
+        
+        <li class="tsd-kind-module">
+          <a href="/api/arcgis-rest-auth/" class="tsd-kind-icon">@esri/arcgis-rest-auth</a>
+          <ul class="api-package-content-list">
+          
+            <li class="tsd-kind-class"><a href="/api/arcgis-rest-auth/ApplicationSession/" class="tsd-kind-icon">ApplicationSession</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IApplicationSessionOptions/" class="tsd-kind-icon">IApplicationSessionOptions</a></li>
+          
+            <li class="tsd-kind-class"><a href="/api/arcgis-rest-auth/UserSession/" class="tsd-kind-icon">UserSession</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IOauth2Options/" class="tsd-kind-icon">IOauth2Options</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IUserSessionOptions/" class="tsd-kind-icon">IUserSessionOptions</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IFetchTokenParams/" class="tsd-kind-icon">IFetchTokenParams</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IFetchTokenResponse/" class="tsd-kind-icon">IFetchTokenResponse</a></li>
+          
+            <li class="tsd-kind-type-alias"><a href="/api/arcgis-rest-auth/GrantTypes/" class="tsd-kind-icon">GrantTypes</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-auth/fetchToken/" class="tsd-kind-icon">fetchToken</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IGenerateTokenParams/" class="tsd-kind-icon">IGenerateTokenParams</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-auth/IGenerateTokenResponse/" class="tsd-kind-icon">IGenerateTokenResponse</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-auth/generateToken/" class="tsd-kind-icon">generateToken</a></li>
+          
+          </ul>
+        </li>
+        
+        <li class="tsd-kind-module">
+          <a href="/api/arcgis-rest-common-types/" class="tsd-kind-icon">@esri/arcgis-rest-common-types</a>
+          <ul class="api-package-content-list">
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-common-types/IExtent/" class="tsd-kind-icon">IExtent</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-common-types/IPoint/" class="tsd-kind-icon">IPoint</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-common-types/ISpatialReference/" class="tsd-kind-icon">ISpatialReference</a></li>
+          
+          </ul>
+        </li>
+        
+        <li class="tsd-kind-module">
+          <a href="/api/arcgis-rest-geocoder/" class="tsd-kind-icon">@esri/arcgis-rest-geocoder</a>
+          <ul class="api-package-content-list">
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IAddress/" class="tsd-kind-icon">IAddress</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IAddressBulk/" class="tsd-kind-icon">IAddressBulk</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IBulkGeocodeResponse/" class="tsd-kind-icon">IBulkGeocodeResponse</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IGeocodeParams/" class="tsd-kind-icon">IGeocodeParams</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IGeocodeRequestOptions/" class="tsd-kind-icon">IGeocodeRequestOptions</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IGeocodeResponse/" class="tsd-kind-icon">IGeocodeResponse</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IGeocodeServiceInfoResponse/" class="tsd-kind-icon">IGeocodeServiceInfoResponse</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/ILocation/" class="tsd-kind-icon">ILocation</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/IReverseGeocodeResponse/" class="tsd-kind-icon">IReverseGeocodeResponse</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-geocoder/ISuggestResponse/" class="tsd-kind-icon">ISuggestResponse</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-geocoder/bulkGeocode/" class="tsd-kind-icon">bulkGeocode</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-geocoder/geocode/" class="tsd-kind-icon">geocode</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-geocoder/reverseGeocode/" class="tsd-kind-icon">reverseGeocode</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-geocoder/serviceInfo/" class="tsd-kind-icon">serviceInfo</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-geocoder/suggest/" class="tsd-kind-icon">suggest</a></li>
+          
+          </ul>
+        </li>
+        
+        <li class="tsd-kind-module">
+          <a href="/api/arcgis-rest-items/" class="is-active tsd-kind-icon">@esri/arcgis-rest-items</a>
+          <ul class="api-package-content-list">
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-items/IItem/" class="tsd-kind-icon">IItem</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-items/ISearchRequest/" class="tsd-kind-icon">ISearchRequest</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-items/ISearchResult/" class="tsd-kind-icon">ISearchResult</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/addItemJsonData/" class="tsd-kind-icon">addItemJsonData</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/createItem/" class="tsd-kind-icon">createItem</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/createItemInFolder/" class="is-active tsd-kind-icon">createItemInFolder</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/getItem/" class="tsd-kind-icon">getItem</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/getItemData/" class="tsd-kind-icon">getItemData</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/protectItem/" class="tsd-kind-icon">protectItem</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/removeItem/" class="tsd-kind-icon">removeItem</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/searchItems/" class="tsd-kind-icon">searchItems</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/unprotectItem/" class="tsd-kind-icon">unprotectItem</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-items/updateItem/" class="tsd-kind-icon">updateItem</a></li>
+          
+          </ul>
+        </li>
+        
+        <li class="tsd-kind-module">
+          <a href="/api/arcgis-rest-request/" class="tsd-kind-icon">@esri/arcgis-rest-request</a>
+          <ul class="api-package-content-list">
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-request/IAuthenticationManager/" class="tsd-kind-icon">IAuthenticationManager</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-request/IParams/" class="tsd-kind-icon">IParams</a></li>
+          
+            <li class="tsd-kind-interface"><a href="/api/arcgis-rest-request/IRequestOptions/" class="tsd-kind-icon">IRequestOptions</a></li>
+          
+            <li class="tsd-kind-type-alias"><a href="/api/arcgis-rest-request/HTTPMethods/" class="tsd-kind-icon">HTTPMethods</a></li>
+          
+            <li class="tsd-kind-type-alias"><a href="/api/arcgis-rest-request/ResponseFormats/" class="tsd-kind-icon">ResponseFormats</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-request/request/" class="tsd-kind-icon">request</a></li>
+          
+            <li class="tsd-kind-class"><a href="/api/arcgis-rest-request/ArcGISAuthError/" class="tsd-kind-icon">ArcGISAuthError</a></li>
+          
+            <li class="tsd-kind-type-alias"><a href="/api/arcgis-rest-request/IRetryAuthError/" class="tsd-kind-icon">IRetryAuthError</a></li>
+          
+            <li class="tsd-kind-class"><a href="/api/arcgis-rest-request/ArcGISRequestError/" class="tsd-kind-icon">ArcGISRequestError</a></li>
+          
+            <li class="tsd-kind-enumeration"><a href="/api/arcgis-rest-request/ErrorTypes/" class="tsd-kind-icon">ErrorTypes</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-request/checkForErrors/" class="tsd-kind-icon">checkForErrors</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-request/encodeFormData/" class="tsd-kind-icon">encodeFormData</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-request/encodeQueryString/" class="tsd-kind-icon">encodeQueryString</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-request/getPortalUrl/" class="tsd-kind-icon">getPortalUrl</a></li>
+          
+            <li class="tsd-kind-function"><a href="/api/arcgis-rest-request/processParams/" class="tsd-kind-icon">processParams</a></li>
+          
+          </ul>
+        </li>
+        
+      </ul>
+    </api-search>
+    </div>
+
+    <div class="column-18">
+      <div class="panel">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="clearfix">
+  <h1 class="left font-size-5 code-face trailer-0">createItemInFolder</h1>
+  <small class="tsd-kind-function font-size--2 right"><span class="tsd-kind-icon">Function</span></small>
+</div>
+
+<hr class="leader-half trailer-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ <p>Create an item in a folder</p>
+
+
+  <ul class="list-plain tsd-signatures tsd-kind-function trailer-half">
+    
+      <li class="code-face tsd-signature tsd-kind-icon">createItemInFolder<span class="text-light-gray">(</span>owner: <i>string</i>, item: <i><a href="/api/arcgis-rest-items/IItem/">IItem</a></i>, folder: <i>string</i>, requestOptions: <i>IRequestOptions</i><span class="text-light-gray">) : </span><i>Promise</i><i><span class="text-light-gray">&lt;</span><i>any</i><span class="text-light-gray">&gt;</span></i></li>
+    
+  </ul>
+
+  
+    <h2 class="font-size-1 trailer-half">Parameters</h2>
+    
+  <table>
+    <thead>
+      <tr>
+        <th class="font-size--2">Parameter</th>
+        <th class="font-size--2">Type</th>
+        <th class="font-size--2">Default</th>
+        <th class="font-size--2">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="createItemInFolder-owner">
+          <td class="code-face">
+            <a href="#createItemInFolder-owner" class="table-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg>
+            </a>
+            <span class="code-face">owner</span>
+            
+              
+  
+
+  
+
+  
+
+  
+  <span class="label">Required</span>
+  
+
+  
+
+            
+          </td>
+          <td class="code-face"><i>string</i></td>
+          <td class="code-face"></td>
+          <td class="body-face api-param-comment">
+            
+            <p>owner name</p>
+
+          </td>
+        </tr><tr id="createItemInFolder-item">
+          <td class="code-face">
+            <a href="#createItemInFolder-item" class="table-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg>
+            </a>
+            <span class="code-face">item</span>
+            
+              
+  
+
+  
+
+  
+
+  
+  <span class="label">Required</span>
+  
+
+  
+
+            
+          </td>
+          <td class="code-face"><i><a href="/api/arcgis-rest-items/IItem/">IItem</a></i></td>
+          <td class="code-face"></td>
+          <td class="body-face api-param-comment">
+            
+            <p>item object</p>
+
+          </td>
+        </tr><tr id="createItemInFolder-folder">
+          <td class="code-face">
+            <a href="#createItemInFolder-folder" class="table-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg>
+            </a>
+            <span class="code-face">folder</span>
+            
+              
+  
+
+  
+
+  
+
+  
+  <span class="label">Required</span>
+  
+
+  
+
+            
+          </td>
+          <td class="code-face"><i>string</i></td>
+          <td class="code-face"></td>
+          <td class="body-face api-param-comment">
+            
+            <p>optional folder to create the item in</p>
+
+          </td>
+        </tr><tr id="createItemInFolder-requestOptions">
+          <td class="code-face">
+            <a href="#createItemInFolder-requestOptions" class="table-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg>
+            </a>
+            <span class="code-face">requestOptions</span>
+            
+              
+  
+
+  
+
+  
+
+  
+  <span class="label">Required</span>
+  
+
+  
+
+            
+          </td>
+          <td class="code-face"><i>IRequestOptions</i></td>
+          <td class="code-face"></td>
+          <td class="body-face api-param-comment">
+            
+            <p>= Options for the request</p>
+
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  
+
+  <h2 class="font-size-1 trailer-half">Returns</h2><p><code><i>Promise</i><i><span class="text-light-gray">&lt;</span><i>any</i><span class="text-light-gray">&gt;</span></i></code></p>
+
+
+  
+
+
+
+
+
+<hr class="leader-half trailer-half">
+
+<small class="font-size--2">Function defined in <a href="https://github.com/Esri/arcgis-rest-js/blob/master/packages/arcgis-rest-items/src/items.ts#L88">packages/arcgis-rest-items/src/items.ts:88</a></small>
+
+<details class="leader-1">
+  <summary>Debug Info</summary>
+  <pre><code>undefined</code></pre>
+</details>
+      </div>
+    </div>
+  </div>
+
+      </main>
+    </div>
+
+    <footer class="footer leader-1">
+      
+<div class="grid-container">
+  <div class="column-24">
+    <h2>Legend</h2>
+    <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+      <div class="block">
+        <ul class="list-plain">
+            <li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+            <li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+            <li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+            <li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+            <li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+            <li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+            <li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+            <li class="tsd-kind-enumeration"><span class="tsd-kind-icon">Enumeration</span></li>
+            <li class="tsd-kind-enumeration-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+            <li class="tsd-kind-property tsd-parent-kind-enumeration"><span class="tsd-kind-icon">Property</span></li>
+            <li class="tsd-kind-method tsd-parent-kind-enumeration"><span class="tsd-kind-icon">Method</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+          <li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+          <li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+          <li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+          <li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+          <li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+          <li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+          <li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+          <li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+          <li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+          <li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+          <li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+          <li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+          <li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+          <li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+          <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+          <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+          <li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+          <li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+          <li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+          <li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+          <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+          <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+          <li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <ul class="list-plain">
+          <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+          <li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="leader-half trailer-half">
+  </div>
+</div>
+
+
+      <div class="grid-container">
+        <div class="column-24 trailer-half">
+          <a href="https://github.com/Esri/arcgis-rest-js" class="font-size--1">Fork this project on GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/js/calcite-web.min.js"></script>
+
+    <script>
+       calcite.init()
+    </script>
+
+    
+  <script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/fuse.js@3.0.5/dist/fuse.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/api-search.js"></script>
+
+  </body>
+</html>

@@ -84,6 +84,7 @@ export function searchItems(
  * @param item - item object
  * @param folder - optional folder to create the item in
  * @param requestOptions = Options for the request
+ * @returns A Promise that will resolve with the data from the response.
  */
 export function createItemInFolder(
   owner: string,
@@ -112,6 +113,7 @@ export function createItemInFolder(
  * @param owner - owner name
  * @param item - the item
  * @param requestOptions - Options for the request
+ * @returns A Promise that will resolve with the data from the response.
  */
 export function createItem(
   owner: string,
@@ -129,6 +131,7 @@ export function createItem(
  * @param owner - Item owner username
  * @param data - Javascript object to store
  * @param requestOptions - Options for the request
+ * @returns A Promise that will resolve with the data from the response.
  */
 export function addItemJsonData(
   id: string,
@@ -278,7 +281,7 @@ export function unprotectItem(
  *
  * @param id - guid item id
  * @param requestOptions - Options for the request
- * @returns A Promise to unprotect an item.
+ * @returns A Promise that resolves with information about the resources associated with an item.
  */
 export function getItemResources(
   id: string,
@@ -297,7 +300,7 @@ export function getItemResources(
  * @param name - new resource filename
  * @param content - text input to be added as a file resource
  * @param requestOptions - Options for the request
- * @returns A Promise to unprotect an item.
+ * @returns A Promise that resolves with the status of the operation.
  */
 export function updateItemResource(
   id: string,
@@ -325,7 +328,7 @@ export function updateItemResource(
  * @param owner - guid item id
  * @param resource - guid item id
  * @param requestOptions - Options for the request
- * @returns A Promise to unprotect an item.
+ * @returns A Promise that resolves with the status of the operation.
  */
 export function removeItemResource(
   id: string,
